@@ -17,7 +17,14 @@ Java调取音乐api接口
 收藏单曲、自建歌单，支持增删歌曲
 歌曲评论、点赞评论、查看热门评论
 本地缓存播放记录、我的收藏
+
+
+
+
+
+
 ##展示
+
 <img src="https://github.com/qianqiu069/music/blob/master/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-10%20224016.png?raw=true" width="280">
 ##
 欢迎Star，学习问题可提Issue交流。
