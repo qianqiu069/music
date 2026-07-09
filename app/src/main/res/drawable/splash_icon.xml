@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  启动画面图标：Android 12+ 系统 SplashScreen 会把图标区域(288dp)
+  裁切成圆形，只有内部约 192dp 的区域不会被遮挡。
+  这里通过 inset 把 qd.png 缩到内部安全区，避免被白色背景遮挡。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="20dp"
+        android:top="20dp"
+        android:right="20dp"
+        android:bottom="20dp">
+        <bitmap
+            android:src="@drawable/qd"
+            android:gravity="fill" />
+    </item>
+</layer-list>

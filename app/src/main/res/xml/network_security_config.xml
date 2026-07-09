@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  网络安全配置：
+  允许应用通过 HTTP（明文）连接 cyapi.top，
+  否则 Android 9.0(API 28)+ 默认会阻塞 http 请求
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

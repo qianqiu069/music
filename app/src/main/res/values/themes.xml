@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 应用全局主题：基于 Material 主题 -->
+    <style name="Theme.MusicApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimary">@color/neteaseRed</item>
+        <item name="colorPrimaryDark">@color/neteaseRedDark</item>
+        <item name="colorAccent">@color/neteaseRedLight</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/neteaseRedDark</item>
+        <item name="android:windowBackground">@color/bgWhite</item>
+    </style>
+
+    <!-- 播放页专用主题：深色背景 -->
+    <style name="Theme.MusicApp.Play" parent="Theme.MusicApp">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/bgPlay</item>
+        <item name="android:windowBackground">@color/bgPlay</item>
+    </style>
+
+    <!-- 启动画面专用主题：Android 12+ 原生 SplashScreen，居中显示 qd.png -->
+    <style name="Theme.MusicApp.Splash" parent="Theme.MusicApp">
+        <item name="android:windowSplashScreenBackground">@color/bgWhite</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+    </style>
+
+    <!-- ============================================================ -->
+    <!--  以下为"设置类列表行"复用样式（个人中心页、设置页都会用到）   -->
+    <!-- ============================================================ -->
+
+    <!-- 一整行点击区域：左侧文字 + 右侧箭头 -->
+    <style name="ProfileRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- 行内主文本：占据剩余空间 -->
+    <style name="ProfileRowText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- 行末小箭头 ">" -->
+    <style name="ProfileRowArrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textHint</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 分割线（两个 Row 之间细横线） -->
+    <style name="ProfileDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!-- 设置页分组标题 -->
+    <style name="SettingsGroupHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

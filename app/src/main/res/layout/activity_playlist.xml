@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgWhite">
+
+    <!-- 顶部标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/neteaseRed"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/playlist_title"
+            android:textColor="@color/textOnDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- 放大镜：点击跳到搜索页（顶栏最右） -->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/btn_search"
+            android:src="@drawable/ic_search_white" />
+    </RelativeLayout>
+
+    <!-- 主内容区：可滚动 -->
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- "推荐歌单" 分区标题 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/section_recommend"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- 3 行 2 列的歌单卡片 -->
+            <!-- 第 1 行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/card_fan"
+                    layout="@layout/item_playlist_card" />
+
+                <include
+                    android:id="@+id/card_dao"
+                    layout="@layout/item_playlist_card" />
+            </LinearLayout>
+
+            <!-- 第 2 行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/card_man"
+                    layout="@layout/item_playlist_card" />
+
+                <include
+                    android:id="@+id/card_girl"
+                    layout="@layout/item_playlist_card" />
+            </LinearLayout>
+
+            <!-- 第 3 行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/card_er"
+                    layout="@layout/item_playlist_card" />
+
+                <include
+                    android:id="@+id/card_free"
+                    layout="@layout/item_playlist_card" />
+            </LinearLayout>
+
+            <!-- "热榜歌曲" 分区标题 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/section_hot"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- 热榜歌曲列表 -->
+            <LinearLayout
+                android:id="@+id/ll_hot_songs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 顶部分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bgWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/home_title"
+                android:duplicateParentState="true"
+                android:src="@drawable/ic_home"
+                app:tint="@color/tab_color" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="@string/home_title"
+                android:textColor="@color/tab_color"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/profile_title"
+                android:duplicateParentState="true"
+                android:src="@drawable/ic_profile"
+                app:tint="@color/tab_color" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="@string/profile_title"
+                android:textColor="@color/tab_color"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

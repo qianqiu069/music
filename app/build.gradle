@@ -1,0 +1,52 @@
+// app 模块的 build.gradle
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    // 应用包名空间（同时也是 R 文件包名）
+    namespace 'com.example.musicapp'
+    compileSdk 34
+    // 编译用的 SDK 版本
+
+    defaultConfig {
+        // 应用的唯一 ID，发布到应用市场用
+        applicationId "com.example.musicapp"
+        minSdk 26
+        targetSdk 34
+        // 最低支持 Android 版本：Android 7.0
+        // 目标 SDK 版本：Android 14
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // 是否启用代码混淆，初学者保持 false
+            minifyEnabled false
+        }
+    }
+    // Java 版本（推荐 1.8 以兼容性最强）
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // AndroidX 基础库
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // 谷歌 Material 设计组件库（CardView/FloatingActionButton 等）
+    implementation 'com.google.android.material:material:1.10.0'
+    // ConstraintLayout 约束布局（项目里也会用到 LinearLayout/RelativeLayout）
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // RecyclerView 列表组件
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // OkHttp - 用于网络请求（比 HttpURLConnection 好用很多）
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    // Gson - 用于 JSON 解析（把 JSON 字符串转换成 Java 对象）
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // Glide - 用于加载网络图片（专辑封面用）
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+}

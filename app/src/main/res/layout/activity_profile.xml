@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgGray">
+
+    <!-- 顶部红色标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/neteaseRed"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/profile_title"
+            android:textColor="@color/textOnDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 用户信息卡 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/bgWhite"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/app"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:contentDescription="@string/profile_title" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_default_name"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/profile_default_motto"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:background="@color/bgWhite">
+
+                <!-- 我喜欢的 -->
+                <LinearLayout
+                    android:id="@+id/row_favorites"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_favorites" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+
+                <View style="@style/ProfileDivider" />
+
+                <!-- 播放历史 -->
+                <LinearLayout
+                    android:id="@+id/row_history"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_history" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+
+                <View style="@style/ProfileDivider" />
+
+                <!-- 排行榜 -->
+                <LinearLayout
+                    android:id="@+id/row_rank"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_rank" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:background="@color/bgWhite">
+
+                <!-- 设置 -->
+                <LinearLayout
+                    android:id="@+id/row_settings"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_settings" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+
+                <View style="@style/ProfileDivider" />
+
+                <!-- 关于 -->
+                <LinearLayout
+                    android:id="@+id/row_about"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_about" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/SettingsGroupHeader"
+                android:text="@string/profile_section_demo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bgWhite">
+
+                <!-- 示例歌手 -->
+                <LinearLayout
+                    android:id="@+id/row_artist"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_demo_artist" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+
+                <View style="@style/ProfileDivider" />
+
+                <!-- 示例专辑 -->
+                <LinearLayout
+                    android:id="@+id/row_album"
+                    style="@style/ProfileRow">
+
+                    <TextView
+                        style="@style/ProfileRowText"
+                        android:text="@string/profile_demo_album" />
+
+                    <TextView
+                        style="@style/ProfileRowArrow"
+                        android:text="@string/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 退出登录按钮 -->
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/bg_btn_login"
+                android:text="@string/profile_logout"
+                android:textColor="@color/textOnDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bgWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/home_title"
+                android:duplicateParentState="true"
+                android:src="@drawable/ic_home"
+                app:tint="@color/tab_color" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="@string/home_title"
+                android:textColor="@color/tab_color"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 右：我的（当前页，进入 Activity 后调用 tab_profile.setSelected(true) 触发红色高亮） -->
+        <LinearLayout
+            android:id="@+id/tab_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/profile_title"
+                android:duplicateParentState="true"
+                android:src="@drawable/ic_profile"
+                app:tint="@color/tab_color" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="@string/profile_title"
+                android:textColor="@color/tab_color"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

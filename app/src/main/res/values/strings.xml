@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用名称：会在桌面图标下显示 -->
+    <string name="app_name">网易云音乐</string>
+
+    <!-- 登录页 -->
+    <string name="login_title">网易云音乐</string>
+    <string name="login_subtitle">音乐的力量</string>
+    <string name="hint_username">请输入用户名 / 手机号</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="btn_login">登 录</string>
+    <string name="text_register">还没有账号？立即注册</string>
+    <string name="toast_empty_username">请输入用户名</string>
+    <string name="toast_empty_password">请输入密码</string>
+    <string name="toast_login_success">登录成功，欢迎回来！</string>
+    <string name="toast_register">注册功能开发中…</string>
+
+    <!-- 主页/搜索页 -->
+    <string name="hint_search">搜索歌曲、歌手、歌词</string>
+    <string name="btn_search">搜索</string>
+    <string name="empty_default">输入关键词，点击搜索开始</string>
+
+    <!-- 播放页 -->
+    <string name="play_unknown">未知</string>
+
+    <!-- 歌单推荐页 -->
+    <string name="playlist_title">歌单推荐</string>
+    <string name="section_recommend">推荐歌单</string>
+    <string name="section_hot">热榜歌曲</string>
+    <string name="home_title">首页</string>
+
+    <!-- ============= 通用 ============= -->
+    <string name="btn_back">返回</string>
+    <string name="arrow_right">›</string>
+    <string name="text_loading">加载中…</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="text_forgot_password">忘记密码？</string>
+
+    <!-- ============= 注册页 ============= -->
+    <string name="register_title">注册账号</string>
+    <string name="register_subtitle">填写以下信息完成注册</string>
+    <string name="hint_username_new">请输入用户名（2 ~ 20 位）</string>
+    <string name="hint_phone">请输入 11 位手机号</string>
+    <string name="hint_password_new">请输入密码（≥ 6 位）</string>
+    <string name="hint_password_confirm">请再次输入密码</string>
+    <string name="btn_register">注 册</string>
+    <string name="text_go_login">已有账号？返回登录</string>
+    <string name="toast_username_too_short">用户名至少 2 个字符</string>
+    <string name="toast_empty_phone">请输入手机号</string>
+    <string name="toast_phone_invalid">手机号格式不正确</string>
+    <string name="toast_password_too_short">密码至少 6 位</string>
+    <string name="toast_password_mismatch">两次密码不一致</string>
+    <string name="toast_register_success">注册成功，请登录</string>
+
+    <!-- ============= 找回密码页 ============= -->
+    <string name="forgot_title">找回密码</string>
+    <string name="forgot_subtitle">通过手机号验证身份后重置密码</string>
+    <string name="hint_code">短信验证码</string>
+    <string name="btn_get_code">获取验证码</string>
+    <string name="btn_reset_password">重置密码</string>
+    <string name="toast_empty_code">请输入验证码</string>
+    <string name="toast_code_sent">验证码已发送（演示版：%1$s）</string>
+    <string name="toast_code_wrong">验证码不正确</string>
+    <string name="toast_reset_success">密码已重置，请重新登录</string>
+
+    <!-- ============= 个人中心页 ============= -->
+    <string name="profile_title">我的</string>
+    <string name="profile_default_name">音乐爱好者</string>
+    <string name="profile_default_motto">用音乐记录生活</string>
+    <string name="profile_favorites">我喜欢的音乐</string>
+    <string name="profile_history">播放历史</string>
+    <string name="profile_rank">排行榜</string>
+    <string name="profile_settings">设置</string>
+    <string name="profile_about">关于</string>
+    <string name="profile_logout">退出登录</string>
+    <string name="profile_section_demo">示例直达</string>
+    <string name="profile_demo_artist">推荐歌手：周杰伦</string>
+    <string name="profile_demo_album">推荐专辑：叶惠美</string>
+
+    <!-- ============= 歌单详情页 ============= -->
+    <string name="playlist_detail_title">歌单详情</string>
+    <string name="playlist_author_by">By %1$s</string>
+    <string name="btn_play_all">播放全部</string>
+    <string name="toast_no_songs">歌单为空</string>
+
+    <!-- ============= 歌手详情页 ============= -->
+    <string name="artist_title">歌手</string>
+    <string name="artist_hot_songs">热门歌曲</string>
+    <string name="artist_default_bio">华语流行音乐代表人物，多次获得金曲奖最佳歌手与年度专辑奖。</string>
+
+    <!-- ============= 专辑详情页 ============= -->
+    <string name="album_title">专辑</string>
+    <string name="album_default_name">叶惠美</string>
+    <string name="album_artist_label">歌手：%1$s</string>
+    <string name="album_year_label">发行：%1$s</string>
+    <string name="album_track_count">共 %1$d 首</string>
+    <string name="album_tracks">曲目</string>
+
+    <!-- ============= 排行榜页 ============= -->
+    <string name="rank_title">排行榜</string>
+    <string name="rank_tab_soar">飙升榜</string>
+    <string name="rank_tab_hot">热歌榜</string>
+    <string name="rank_tab_new">新歌榜</string>
+
+    <!-- ============= 收藏页 ============= -->
+    <string name="favorites_title">我喜欢的音乐</string>
+    <string name="favorites_count">共 %1$d 首</string>
+    <string name="favorites_empty">还没有收藏任何歌曲～</string>
+    <string name="icon_heart">♥</string>
+    <string name="toast_demo_song">示例数据：%1$s（请前往搜索页播放）</string>
+
+    <!-- ============= 历史页 ============= -->
+    <string name="history_title">播放历史</string>
+    <string name="history_clear">清空</string>
+    <string name="history_summary">最近播放了 %1$d 首歌</string>
+    <string name="history_empty">还没有播放记录～</string>
+    <string name="dialog_history_clear_msg">确定要清空全部播放历史吗？</string>
+    <string name="toast_history_already_empty">历史已经是空的啦</string>
+    <string name="toast_history_cleared">已清空历史</string>
+
+    <!-- ============= 设置页 ============= -->
+    <string name="settings_title">设置</string>
+    <string name="settings_group_play">播放设置</string>
+    <string name="settings_group_look">外观</string>
+    <string name="settings_group_storage">存储</string>
+    <string name="settings_quality">音质</string>
+    <string name="quality_standard">标准音质</string>
+    <string name="quality_high">高品音质</string>
+    <string name="quality_lossless">无损音质</string>
+    <string name="settings_wifi_only">仅 WiFi 下播放</string>
+    <string name="settings_dark_mode">深色模式</string>
+    <string name="settings_clear_cache">清除缓存</string>
+    <string name="toast_quality_changed">已切换为：%1$s</string>
+    <string name="toast_wifi_only_on">已开启仅 WiFi 播放</string>
+    <string name="toast_wifi_only_off">已关闭仅 WiFi 播放</string>
+    <string name="toast_dark_on">深色模式已开启（重启后生效）</string>
+    <string name="toast_dark_off">深色模式已关闭（重启后生效）</string>
+    <string name="dialog_clear_cache_msg">将清除所有歌曲与图片缓存，确定吗？</string>
+    <string name="toast_cache_cleared">缓存已清理</string>
+
+    <!-- ============= 关于页 ============= -->
+    <string name="about_title">关于</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_intro">一个用于 Android 课程学习的网易云音乐风格应用，演示 Activity、布局、网络请求、MediaPlayer 等基础知识。</string>
+    <string name="about_author_label">作者</string>
+    <string name="about_author_value">13组所有成员</string>
+    <string name="about_course_label">课程</string>
+    <string name="about_course_value">Android 移动应用开发</string>
+    <string name="about_api_label">数据源</string>
+    <string name="about_api_value">cyapi.top 公开音乐 API</string>
+</resources>

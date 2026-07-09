@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部 Tab 颜色 selector：选中红色、未选中灰色，文字和图标 tint 都复用 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/neteaseRed" />
+    <item android:color="@color/textSecondary" />
+</selector>
